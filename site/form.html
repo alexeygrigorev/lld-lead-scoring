@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSphere Demo Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-50 p-4 min-h-screen">
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-sm border">
+        <!-- Form Header -->
+        <div class="p-6 border-b">
+            <h1 class="text-xl font-semibold text-gray-900">Request LearnSphere Demo</h1>
+            <p class="mt-1 text-sm text-gray-500">Complete the form below to request a personalized demo of LearnSphere
+            </p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="px-6 py-4">
+            <div class="flex justify-between mb-2">
+                <div class="w-1/3 h-2 rounded-full bg-blue-600 mx-1" id="step1-indicator"></div>
+                <div class="w-1/3 h-2 rounded-full bg-gray-200 mx-1" id="step2-indicator"></div>
+                <div class="w-1/3 h-2 rounded-full bg-gray-200 mx-1" id="step3-indicator"></div>
+            </div>
+            <div class="flex justify-between text-sm text-gray-500">
+                <span>Basic Information</span>
+                <span>Organization Details</span>
+                <span>Role & Requirements</span>
+            </div>
+        </div>
+
+        <!-- Form Content -->
+        <form id="registration-form" class="p-6">
+            <!-- Step 1: Basic Information -->
+            <div class="step" id="step1">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Company/Institution Name*
+                        </label>
+                        <div class="relative">
+                            <i data-feather="briefcase" class="absolute left-3 top-3 h-4 w-4 text-gray-400"></i>
+                            <input type="text" required name="company_name"
+                                class="pl-9 w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Enter company name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Full Name*
+                        </label>
+                        <div class="relative">
+                            <i data-feather="user" class="absolute left-3 top-3 h-4 w-4 text-gray-400"></i>
+                            <input type="text" required name="full_name"
+                                class="pl-9 w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Enter your full name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Work Email*
+                        </label>
+                        <div class="relative">
+                            <i data-feather="at-sign" class="absolute left-3 top-3 h-4 w-4 text-gray-400"></i>
+                            <input type="email" required name="email"
+                                class="pl-9 w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Enter your work email">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Phone Number (Optional)
+                        </label>
+                        <div class="relative">
+                            <i data-feather="phone" class="absolute left-3 top-3 h-4 w-4 text-gray-400"></i>
+                            <input type="tel" name="phone"
+                                class="pl-9 w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Enter your phone number">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            How did you hear about us?*
+                        </label>
+                        <div class="relative">
+                            <i data-feather="help-circle" class="absolute left-3 top-3 h-4 w-4 text-gray-400"></i>
+                            <select required name="source"
+                                class="pl-9 w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select an option</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="conference">Education Conference</option>
+                                <option value="review">Product Review Site</option>
+                                <option value="referral">Referral</option>
+                                <option value="direct">Direct Traffic</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Organization Details -->
+            <div class="step hidden" id="step2">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Organization Type*
+                        </label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" required name="org_type" value="higher_education"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Higher Education</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_type" value="corporate_training"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Corporate Training</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_type" value="k12"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">K-12 School</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_type" value="training_provider"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Professional Training Provider</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_type" value="course_creator"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Individual Course Creator</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_type" value="certification"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Certification Body</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Organization Size*
+                        </label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" required name="org_size" value="1-50"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">1-50 employees</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_size" value="51-200"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">51-200 employees</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_size" value="201-500"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">201-500 employees</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_size" value="501-1000"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">501-1000 employees</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="org_size" value="1000+"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">1000+ employees</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Expected Number of Students*
+                        </label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" required name="student_count" value="<100"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">&lt;100</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="student_count" value="100-500"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">100-500</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="student_count" value="501-1000"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">501-1000</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="student_count" value="1000-5000"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">1000-5000</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="student_count" value="5000+"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">5000+</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Role & Requirements -->
+            <div class="step hidden" id="step3">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Your Role*
+                        </label>
+                        <select required name="role"
+                            class="w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">Select your role</option>
+                            <option value="training_manager">Training Manager</option>
+                            <option value="teacher">Teacher/Professor</option>
+                            <option value="course_creator">Course Creator</option>
+                            <option value="hr_manager">HR Manager</option>
+                            <option value="department_head">Department Head</option>
+                            <option value="it_admin">IT Administrator</option>
+                            <option value="independent">Independent Instructor</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Primary Use Case*
+                        </label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" required name="use_case" value="employee_training"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Employee Training</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="use_case" value="academic_courses"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Academic Courses</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="use_case" value="professional_certification"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Professional Certification</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="use_case" value="compliance_training"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Compliance Training</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="use_case" value="skills_development"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Skills Development</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="use_case" value="customer_training"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Customer Training</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Required Features*
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="course_creation"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Course Creation</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="virtual_classroom"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Virtual Classroom</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="assessment_tools"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Assessment Tools</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="mobile_learning"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Mobile Learning</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="analytics"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Analytics & Reporting</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="integration"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Integration Capabilities</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="certification"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Certification Management</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="compliance"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Compliance Training</label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" name="features[]" value="content_library"
+                                    class="h-4 w-4 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-3 text-sm text-gray-700">Content Library</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+                            Current Solution*
+                        </label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" required name="current_solution" value="no_lms"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">No LMS</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="current_solution" value="competitor"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Competitor Product</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="current_solution" value="custom"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Custom Built Solution</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="current_solution" value="basic"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label class="ml-3 text-sm text-gray-700">Basic Tools</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Decision Timeframe*
+                        </label>
+                        <select required name="timeframe"
+                            class="w-full rounded-md border border-gray-300 py-2 px-3 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">Select timeframe</option>
+                            <option value="1_month">Within 1 month</option>
+                            <option value="1_3_months">1-3 months</option>
+                            <option value="3_6_months">3-6 months</option>
+                            <option value="6_plus_months">6+ months</option>
+                            <option value="exploring">Just exploring</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="mt-8 flex justify-between">
+                <button type="button" id="prevBtn" onclick="previousStep()"
+                    class="hidden items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <i data-feather="chevron-left" class="h-4 w-4 mr-2"></i>
+                    Previous
+                </button>
+                <button type="button" id="nextBtn" onclick="nextStep()"
+                    class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Next
+                    <i data-feather="chevron-right" class="h-4 w-4 ml-2"></i>
+                </button>
+                <button type="submit" id="submitBtn"
+                    class="hidden items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Submit
+                    <i data-feather="check" class="h-4 w-4 ml-2"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="hidden p-6 text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                <i data-feather="check" class="h-6 w-6 text-green-600"></i>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Thank you for your interest!</h3>
+            <p class="text-sm text-gray-500">
+                We've received your registration. Our team will review your requirements
+                and contact you shortly to set up your demo.
+            </p>
+        </div>
+    </div>
+
+    </form>
+
+    <!-- Success Message (Hidden by default) -->
+    <div id="successMessage" class="hidden p-6 text-center">
+        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+            <i data-feather="check" class="h-6 w-6 text-green-600"></i>
+        </div>
+        <h3 class="text-lg font-medium text-gray-900 mb-2">Thank you for your interest!</h3>
+        <p class="text-sm text-gray-500">
+            We've received your registration. Our team will review your requirements
+            and contact you shortly to set up your demo.
+        </p>
+    </div>
+    </div>
+
+    <script>
+        // Variable declarations first
+        let currentStep = 1;
+        const form = document.getElementById('registration-form');
+        const successMessage = document.getElementById('successMessage');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Functions
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.step').forEach(s => s.classList.add('hidden'));
+            // Show current step
+            document.getElementById(`step${step}`).classList.remove('hidden');
+
+            // Update progress indicators
+            for (let i = 1; i <= 3; i++) {
+                const indicator = document.getElementById(`step${i}-indicator`);
+                if (i <= step) {
+                    indicator.classList.remove('bg-gray-200');
+                    indicator.classList.add('bg-blue-600');
+                } else {
+                    indicator.classList.remove('bg-blue-600');
+                    indicator.classList.add('bg-gray-200');
+                }
+            }
+
+            // Update buttons
+            if (prevBtn && nextBtn && submitBtn) {
+                prevBtn.style.display = step === 1 ? 'none' : 'inline-flex';
+                nextBtn.style.display = step === 3 ? 'none' : 'inline-flex';
+                submitBtn.style.display = step === 3 ? 'inline-flex' : 'none';
+            }
+        }
+
+        function nextStep() {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function validateStep(step) {
+            const currentStepElement = document.getElementById(`step${step}`);
+            const requiredFields = currentStepElement.querySelectorAll('[required]');
+
+            let valid = true;
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    field.classList.add('border-red-500');
+                    valid = false;
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+            });
+
+            return valid;
+        }
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Feather icons
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+
+            // Add form submit handler
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    if (validateStep(currentStep)) {
+                        // Show loading state
+                        if (submitBtn) {
+                            submitBtn.disabled = true;
+                            submitBtn.innerHTML = `
+                                <svg class="animate-spin h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Processing...
+                            `;
+                        }
+
+                        // Simulate form submission
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+
+                        // Hide form and show success message
+                        if (form && successMessage) {
+                            form.classList.add('hidden');
+                            successMessage.classList.remove('hidden');
+                        }
+                    }
+                });
+            }
+
+            // Initialize first step
+            showStep(1);
+        });
+
+        // Make functions available globally for onclick handlers
+        window.nextStep = nextStep;
+        window.previousStep = previousStep;
+    </script>
+</body>
+
+</html>
