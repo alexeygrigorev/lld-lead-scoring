@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import random
 
 class DemoDataGenerator:
-    def __init__(self, seed=42):
+    def __init__(self, num_users=100, seed=42):
         np.random.seed(seed)
         random.seed(seed)
         
@@ -56,6 +56,8 @@ class DemoDataGenerator:
             'configure_branding': 0.5,
             'create_assessment': 0.5
         }
+
+        self.num_users = num_users
 
     def generate_user_profile(self, user_id):
         """Generate a user profile with attributes that influence conversion probability"""
@@ -207,7 +209,7 @@ class DemoDataGenerator:
         activities_data = []
         
         # Generate user profiles
-        for i in range(100):
+        for i in range(self.num_users):
             user_id = f'USR{i+1:03d}'
             user_profile = self.generate_user_profile(user_id)
             
@@ -245,12 +247,12 @@ class DemoDataGenerator:
         return users_df, activities_df
 
 # Generate the datasets
-generator = DemoDataGenerator()
+generator = DemoDataGenerator(num_users=2000)
 users_df, logs_df = generator.generate_datasets()
 
 # Save to CSV files
-users_df.to_csv('users.csv', index=False)
-logs_df.to_csv('logs.csv', index=False)
+users_df.to_csv('data/random-users.csv', index=False)
+logs_df.to_csv('data/random-logs.csv', index=False)
 
 # Print some statistics
 print("\nDataset Statistics:")

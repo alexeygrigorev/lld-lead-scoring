@@ -21,6 +21,13 @@ Links:
 * Using LLM to generate prompts
 * Dataset overview
 * Generating data
+* Prepare the enviroment (codespaces)
+
+Installing libraries:
+
+```bash
+pip install pandas numpy scikit-learn jupyter
+```
 
 Links:
 
