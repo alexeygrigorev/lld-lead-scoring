@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSphere - Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Feather Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left side: Logo and main navigation -->
+                <div class="flex">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="book-open" class="h-8 w-8 text-blue-600"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">LearnSphere</span>
+                    </div>
+                    
+                    <!-- Main Navigation -->
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i data-feather="layout" class="h-4 w-4 mr-2"></i>
+                            Dashboard
+                        </a>
+                        <a href="#" class="border-b-2 border-transparent hover:border-gray-300 text-gray-500 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i data-feather="book" class="h-4 w-4 mr-2"></i>
+                            Courses
+                        </a>
+                        <a href="#" class="border-b-2 border-transparent hover:border-gray-300 text-gray-500 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i data-feather="users" class="h-4 w-4 mr-2"></i>
+                            Students
+                        </a>
+                        <a href="#" class="border-b-2 border-transparent hover:border-gray-300 text-gray-500 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i data-feather="bar-chart-2" class="h-4 w-4 mr-2"></i>
+                            Analytics
+                        </a>
+                        <a href="#" class="border-b-2 border-transparent hover:border-gray-300 text-gray-500 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i data-feather="settings" class="h-4 w-4 mr-2"></i>
+                            Settings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right side: User profile -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <button class="flex items-center space-x-3 focus:outline-none">
+                                <img class="h-8 w-8 rounded-full" src="/api/placeholder/32/32" alt="User avatar">
+                                <span class="hidden md:block text-sm font-medium text-gray-700">Sarah Johnson</span>
+                                <i data-feather="chevron-down" class="h-4 w-4 text-gray-400"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8">
+            <h1 class="text-2xl font-bold text-gray-900">Welcome back, Sarah!</h1>
+            <p class="mt-1 text-sm text-gray-500">Here's what's happening with your courses today.</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+            <!-- Active Courses -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-5">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i data-feather="book-open" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Active Courses</dt>
+                                <dd class="flex items-baseline">
+                                    <div class="text-2xl font-semibold text-gray-900">12</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enrolled Students -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-5">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i data-feather="users" class="h-6 w-6 text-green-600"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Enrolled Students</dt>
+                                <dd class="flex items-baseline">
+                                    <div class="text-2xl font-semibold text-gray-900">284</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completion Rate -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-5">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i data-feather="check-circle" class="h-6 w-6 text-indigo-600"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Completion Rate</dt>
+                                <dd class="flex items-baseline">
+                                    <div class="text-2xl font-semibold text-gray-900">78%</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Average Score -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-5">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i data-feather="target" class="h-6 w-6 text-yellow-600"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Average Score</dt>
+                                <dd class="flex items-baseline">
+                                    <div class="text-2xl font-semibold text-gray-900">85%</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <!-- Recent Activity -->
+            <div class="bg-white shadow rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Recent Activity</h2>
+                    <div class="flow-root">
+                        <ul class="divide-y divide-gray-200">
+                            <li class="py-3">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex-shrink-0">
+                                        <i data-feather="user-plus" class="h-6 w-6 text-green-500"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-sm font-medium text-gray-900">New student enrollment</p>
+                                        <p class="text-sm text-gray-500">John Doe enrolled in "Web Development Basics"</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">5m ago</div>
+                                </div>
+                            </li>
+                            <li class="py-3">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex-shrink-0">
+                                        <i data-feather="check-circle" class="h-6 w-6 text-blue-500"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-sm font-medium text-gray-900">Course completion</p>
+                                        <p class="text-sm text-gray-500">Emma Wilson completed "Python Programming"</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">2h ago</div>
+                                </div>
+                            </li>
+                            <li class="py-3">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex-shrink-0">
+                                        <i data-feather="file-text" class="h-6 w-6 text-yellow-500"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-sm font-medium text-gray-900">Assignment submitted</p>
+                                        <p class="text-sm text-gray-500">Alex Johnson submitted "Final Project"</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">1d ago</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Progress -->
+            <div class="bg-white shadow rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Course Progress</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Web Development Basics</span>
+                                <span class="text-sm font-medium text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Python Programming</span>
+                                <span class="text-sm font-medium text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Data Science Fundamentals</span>
+                                <span class="text-sm font-medium text-gray-500">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
