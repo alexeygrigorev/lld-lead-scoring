@@ -251,8 +251,8 @@ generator = DemoDataGenerator(num_users=2000)
 users_df, logs_df = generator.generate_datasets()
 
 # Save to CSV files
-users_df.to_csv('data/random-users.csv', index=False)
-logs_df.to_csv('data/random-logs.csv', index=False)
+users_df.to_csv('random-users.csv', index=False)
+logs_df.to_csv('random-logs.csv', index=False)
 
 # Print some statistics
 print("\nDataset Statistics:")
