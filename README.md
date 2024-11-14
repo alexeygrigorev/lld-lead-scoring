@@ -89,7 +89,36 @@ Links:
 * [Video](https://www.loom.com/share/2e48598f016d4add81952be7a13f1e97)
 * [Prompts](prompts/04-feature-engineering.md)
 
-### 5. Training more models
+
+### 5. Experiment tracking
 
 * Experiment tracking with MLFlow
+
+
+Links:
+
+* [Video](https://www.loom.com/share/a546793dc628431f948135360e0edd19)
+* [Prompts](prompts/)
+
+Installing mlflow
+
+```bash
+pip install mlflow
+```
+
+Running MLFlow:
+
+```bash
+mlflow ui
+
+mlflow server \
+   --backend-store-uri sqlite:///mlflow.db \
+   --default-artifact-root mlruns \
+   --host 0.0.0.0 \
+   --port 5000
+```
+
+
+### 6. Training more models
+
 * Training random forest and xgboost
