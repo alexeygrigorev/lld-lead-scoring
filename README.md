@@ -82,7 +82,12 @@ Links:
 
 ### 4. Feature engineering 
 
+* Extracting features from logs
 
+Links:
+
+* [Video](https://www.loom.com/share/2e48598f016d4add81952be7a13f1e97)
+* [Prompts](prompts/04-feature-engineering.md)
 
 ### 5. Training more models
 
