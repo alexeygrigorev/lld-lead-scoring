@@ -121,7 +121,7 @@ mlflow server \
    --port 5000
 ```
 
-### 6. Scikit-Learn Pipelines
+### 6. Scikit-Learn Pipelines (optional)
 
 * Code cleaning 
 * Putting the code into a pipeline
@@ -134,10 +134,15 @@ Links:
 * [Notebook](analytics/train-04-pipelines.ipynb)
 
 
-### 7. Training tree-based models
+### 7. Training tree-based models: Decision Tree and Random Forest
 
 * Training decision tree
 * Training random forest
 
+Links:
+
+* [Video](https://www.loom.com/share/d7bebf90d4b94d2cb0756b03d82ef348)
+* [Prompts]()
+* [Notebook](analytics/train-05-trees.ipynb)
 
 ### 8. XGBoost
