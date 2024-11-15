@@ -51,7 +51,7 @@ Links:
 
 * [Video](https://www.loom.com/share/4beba860d8c24e4c8c1485bd4f79cf44)
 * [Prompts](prompts/02-data.md)
-* [Notebook](analytics/train-01.ipynb)
+* [Notebook](analytics/users.ipynb)
 
 
 To open the Terminal in VS Code, use ``` Ctrl+` ```
@@ -79,7 +79,7 @@ Links:
 
 * [Video](https://www.loom.com/share/74ecce75606b463ea4947661b13ce46d)
 * [Prompts](prompts/03-train.md)
-* [Notebook](analytics/train-02.ipynb)
+* [Notebook](analytics/train-01.ipynb)
 
 
 ### 4. Feature engineering 
@@ -90,8 +90,7 @@ Links:
 
 * [Video](https://www.loom.com/share/2e48598f016d4add81952be7a13f1e97)
 * [Prompts](prompts/04-feature-engineering.md)
-* [Notebook](analytics/train-03-mlflow.ipynb)
-
+* [Notebook](analytics/train-02.ipynb)
 
 ### 5. Experiment tracking
 
