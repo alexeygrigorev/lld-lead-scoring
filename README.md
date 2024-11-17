@@ -118,12 +118,12 @@ mlflow server \
    --backend-store-uri sqlite:///mlflow.db \
    --default-artifact-root mlruns \
    --host 0.0.0.0 \
-   --port 5000
+   --port 5000``
 ```
 
 ### 6. Scikit-Learn Pipelines (optional)
 
-* Code cleaning 
+* Code cleaning
 * Putting the code into a pipeline
 
 
@@ -145,4 +145,18 @@ Links:
 * [Prompts]()
 * [Notebook](analytics/train-05-trees.ipynb)
 
-### 8. XGBoost
+### 8. Training tree-based models: XGBoost
+
+* Training an XGBoost model
+
+Links:
+
+* [Video](https://www.loom.com/share/7a4bc08edeec47fc8cc5c5bef8c1ef83)
+* [Prompts](prompts/08-xgboost.md)
+* [Notebook](analytics/train-06-xgboost.ipynb)
+
+Installing xgboost:
+
+```bash
+pip install xgboost
+```
