@@ -118,7 +118,7 @@ mlflow server \
    --backend-store-uri sqlite:///mlflow.db \
    --default-artifact-root mlruns \
    --host 0.0.0.0 \
-   --port 5000``
+   --port 5000
 ```
 
 ### 6. Scikit-Learn Pipelines (optional)
@@ -142,7 +142,7 @@ Links:
 Links:
 
 * [Video](https://www.loom.com/share/d7bebf90d4b94d2cb0756b03d82ef348)
-* [Prompts]()
+* [Prompts](prompts/07-trees.md)
 * [Notebook](analytics/train-05-trees.ipynb)
 
 ### 8. Training tree-based models: XGBoost
@@ -188,3 +188,30 @@ python train.py \
 
 * Using the model for prediction
 * Getting the model from the registry
+
+
+Links:
+
+* [Video](https://www.loom.com/share/a085a035f5bd4891b47a9092d82c0169)
+
+```bash
+python generate_data_prod.py \
+    --start-date 2024-04-01 \
+    --end-date 2024-04-15 \
+    --start-user-id 2001 \
+    --num-users 154 \
+    --prefix prod-random
+
+python score.py \
+  --users-path data/prod-random-users.csv \
+  --logs-path data/prod-random-logs.csv \
+  --output-path scores.csv \
+  --mlflow-tracking-uri http://localhost:5000 \
+  --run-id 63f1b5f0423c4c298f7384feb245ee40
+
+python score.py \
+  --users-path data/prod-random-users.csv \
+  --logs-path data/prod-random-logs.csv \
+  --output-path scores.csv \
+  --mlflow-tracking-uri http://localhost:5000
+```
