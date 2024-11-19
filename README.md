@@ -193,6 +193,13 @@ python train.py \
 Links:
 
 * [Video](https://www.loom.com/share/a085a035f5bd4891b47a9092d82c0169)
+* [Prompts]()
+* Code:
+  * [`score.py`](score.py)
+  * [`train.py`](train.py)
+  * [`common.py`](common.py)
+  
+
 
 ```bash
 python generate_data_prod.py \
