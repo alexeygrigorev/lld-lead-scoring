@@ -226,11 +226,17 @@ python score.py \
 ### 11. Deployment with AWS (optional)
 
 * Storing models in S3
-* Deployment with AWS Lambda (?)
+* AWS Roles and policies
+* Deployment with AWS Lambda
+
+Note: the initial way of deploying Lambda with zip archive didn't
+work, so you can fast-forward to the part with Docker.
 
 Links:
 
 * [Video](https://www.loom.com/share/67de0a28ce7f4d1fa0c43ec2c50320cb)
+* [Prompts](prompts/11-aws.md)
+* [Code](aws-deploy/)
 
 
 ```bash
