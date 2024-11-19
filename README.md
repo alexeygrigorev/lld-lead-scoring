@@ -193,7 +193,7 @@ python train.py \
 Links:
 
 * [Video](https://www.loom.com/share/a085a035f5bd4891b47a9092d82c0169)
-* [Prompts]()
+* [Prompts](prompts/10-score.md)
 * Code:
   * [`score.py`](score.py)
   * [`train.py`](train.py)
