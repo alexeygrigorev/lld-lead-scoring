@@ -222,3 +222,33 @@ python score.py \
   --output-path scores.csv \
   --mlflow-tracking-uri http://localhost:5000
 ```
+
+### 11. Deployment with AWS (optional)
+
+* Storing models in S3
+* Deployment with AWS Lambda (?)
+
+Links:
+
+* [Video](https://www.loom.com/share/67de0a28ce7f4d1fa0c43ec2c50320cb)
+
+
+```bash
+pip install boto3 s3fs
+```
+
+```bash
+mlflow server \
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root s3://ldd-alexey-mlflow-models \
+    --host 0.0.0.0 \
+    --port 5000
+
+python score.py \
+  --model-bucket ldd-alexey-mlflow-models \
+  --run-id 7e7664049dad47a4b299a96c47fec50d \
+  --input-prefix ldd-alexey-cms-data/input \
+  --output-prefix ldd-alexey-cms-data/predictions
+```
+
+### 12. Summary

@@ -1,0 +1,5 @@
+pandas
+scikit-learn
+boto3
+s3fs
+mlflow[minimal]
