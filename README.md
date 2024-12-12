@@ -258,3 +258,7 @@ python score.py \
 ```
 
 ### 12. Summary
+
+Links:
+
+* [Video](https://www.loom.com/share/c4d896f730b2421bbe5b0a436a97703a) 
