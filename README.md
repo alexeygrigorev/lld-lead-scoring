@@ -34,7 +34,7 @@ Course plan:
 
 Links:
 
-* [Video](https://www.loom.com/share/73e013901bda47b8a4123b563cc0e38e)
+* [Video](https://www.loom.com/share/0a4d8216e3df48e5a4cf5c18b1187317)
 * [Prompts](prompts/01-intro.md)
 * [Slides](https://docs.google.com/presentation/d/19XAVPOAOx00NcvFcUSIWBatV53Nr2wpt-6AmJpGty1U/edit)
 
